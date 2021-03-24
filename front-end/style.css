@@ -1,0 +1,85 @@
+h1{
+  text-align: center;
+}
+
+table table-image{
+
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 30%;
+
+  }
+
+thead {
+    text-align: left;
+  }
+
+table table-image td,
+table table-image th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+
+  th, td {
+    border: 1px solid black;
+  }
+
+caption{
+  padding-top: 50px;
+}
+
+
+/*
+/*table table-image {
+  border: 1px solid black;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+thead {
+  text-align: left;
+}
+
+table table-image td,
+table table-image th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+
+table table-image tbody td {
+  font-size: 13px;
+  text-align: center;
+}
+
+table table-image tr:nth-child(even) {
+  background: #D0E4F5;
+}
+
+table table-image thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+
+table table-image thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+
+table table-image thead th:first-child {
+  border-left: none;
+}*/
+
+
+footer{
+display: flex!important;
+justify-content: space-around;
+padding-top: 30px;
+}
