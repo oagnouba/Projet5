@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="panier.css">
+    <script src='panier.js' async></script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="description"
+        content="Bienvenue chez Orinoco ! Un e-commerce qui se démarque des autres sites en créant des applications thématiques et en vendant qu'un seul groupe de produits!">
+
+    <title> Orinoco - Site e-commerce </title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="head-section">
+                <h1><a href="index.html">Acceuil</a></h1>
+                <div class="comptes">
+                    <div class="compte">
+                        <div class="compte__icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="compte__user">
+                            <a href="#">Compte</a>
+                            <div class="compte__user--style">
+                                <a href="#">Inscription</a>
+                                <a href="#">Connexion</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menuPanier">
+                    <a href="panier.html"><i class="fas fa-shopping-basket"></i> Panier</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="panier">
+                <div class="etatPanier">
+                </div>
+
+                <div class="commande">
+                    <table>
+                    <caption><i>Récapitulatif de votre commande</i></caption>
+                        <thead>
+                            <tr>
+                                <th id="article">Article</th>
+                                <th id="couleur">Couleur</th>
+                                <th id="quantite">Quantité</th>
+                                <th id="total">Prix unitaire</th>
+                                <th>Total de la ligne</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpsPanier">
+                            <tr>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" id="totalPanier"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="formulaire">
+                    <div class="formulaire__fond">
+                        <form method="POST" name="confirmationAchat" id="confirmationAchat">
+                            <div class="selection-validation">
+                                <fieldset>
+                                <legend>Votre identité</legend>
+                                <label for="nom">Nom :</label>
+                                <input type="text" id="nom" placeholder="Nom"
+                                    title="Ne doit contenir ni caractères spéciaux, ni chiffres." required />
+                                <label for="prénom">Prénom :</label>
+                                <input type="text" id="prenom" placeholder="Prénom"
+                                    title="Ne doit contenir ni caractères spéciaux, ni chiffres." required />
+                                <label for="email">E-mail :</label>
+                                <input type="email" id="email" placeholder="nicolas.lecoq@domaine.fr" required />
+                                <span id="aideCourriel"></span>
+                                </fieldset>
+                                <fieldset>
+                                <legend>Votre adresse de livraison</legend>
+                                <label for="adresse">Adresse :</label>
+                                <input type="text" id="adresse" placeholder="Adresse"
+                                    title="Ne doit contenir aucun caractères spéciaux" required />
+                                <label for="ville">Ville :</label>
+                                <input type="text" id="ville"
+                                    title="Ne doit contenir ni caractères spéciaux, ni chiffres" placeholder="Paris"
+                                    required />
+                                </fieldset>
+                                <input type="submit" name="validation" onsubmit="validationClick(event)" id="valider"
+                                    value="Valider votre commande" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="pied">
+                <p>Aide</p>
+                <ul>
+                    <li>Contacter le Service Client</li>
+                    <li>Comment passer commande</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <div class="pied">
+                <p>Nos Services Orinico</p>
+                <ul>
+                    <li>Satisfait ou Remboursé</li>
+                    <li>Livraison</li>
+                    <li>Paiement Sécurisé</li>
+                </ul>
+            </div>
+            <div class="pied">
+                <p>Nos garanties</p>
+                <ul>
+                    <li>Mentions Légales</li>
+                    <li>Conditions générales de vente</li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- Optinal JavaScript  -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS  -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    </div>
+</body>
+
+</html>
