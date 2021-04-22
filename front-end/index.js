@@ -10,7 +10,7 @@ fetch("http://localhost:3000/api/teddies/")
     let listOfProducts = '';
     data.forEach(prod =>
         listOfProducts += `
-      <div class='col'>
+      <div class='col-12 col-md-4 col-lg-3'>
         <div class="card">
           <img src=${prod.imageUrl} class="card-img-top">
           <div class="card-body"></div>
