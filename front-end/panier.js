@@ -160,6 +160,7 @@ function validationClick(e) {
     productList.push(product._id);
   }
 
+//alerte si le client valide un panier vide
   if (productList.length == 0) {
     alert("Votre panier est vide");
     return;//empêche l'exécution de la suite de la fonction
