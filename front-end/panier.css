@@ -2,3 +2,22 @@ td, img{
   max-width: 200px;
 }
 
+.infoMobile{
+display: none;
+}
+
+@media screen and (max-width:450px){
+  .infoMobile {
+    display: inline;
+  }
+  tr{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+  }
+  thead{
+    display: nonex;
+  }
+}
