@@ -23,6 +23,10 @@ fetch("http://localhost:3000/api/teddies/")
 
     document.getElementById('allproducts').innerHTML = listOfProducts;
 
+})
+
+.catch(function (error) {
+  window.alert('Le serveur n\'est pas disponible, essayez ultérieurement.');
 });
 
 
