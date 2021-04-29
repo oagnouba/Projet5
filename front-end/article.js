@@ -40,32 +40,22 @@ fetch("http://localhost:3000/api/teddies/" + productId)
 
 //Ajout panier
 function ajouterAuPanier() {
+  let basket = GetBasket();
 
-    let basket = GetBasket();
+  let indexInBasket = basket.findIndex((item) => item._id === productId);
 
-    //https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
-    let indexInBasket = basket.findIndex(item => item._id === productId)
+  //index ==-1 signifie non trouvé
+  if (indexInBasket < 0) {
+    // si non présent dans le panier
+    product.quantity = 1;
 
-    //index ==-1 signifie non trouvé
-    if (indexInBasket < 0) {
-        // si non présent dans le panier
-        product.quantity = 1;
-        // let productLine = JSON.stringify(product);
-        // localStorage.setItem(productId, productLine);
-        basket.push(product);
-    } // produit déja présent, modifier quantité
-    else {
-        // let itemPanier = localStorage.getItem(productId); //récuperation
-        // let productPanier = JSON.parse(itemPanier); //conversion
+    basket.push(product);
+  } // produit déja présent, modifier quantité
+  else {
 
-        // productPanier.quantity += 1; //initialiser qté = 1
+    basket[indexInBasket].quantity += 1;
+  }
 
-        // let productLine = JSON.stringify(productPanier);
-        // localStorage.setItem(productId, productLine);
-        basket[indexInBasket].quantity += 1;
-    }
-
-    SaveBasket(basket);
-    window.alert("Votre article a été ajouté au panier.");
-
+  SaveBasket(basket);
+  window.alert("Votre article a été ajouté au panier.");
 }

@@ -61,7 +61,6 @@ function supprimerDuPanier(idToRemove) {
     //localStorage.removeItem(id);
     let basket = GetBasket();
 
-    //https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
     // supression , on garde tout les éléments sauf celui qui a l'id que l'on souhaite supprimer
     basket = basket.filter(item => item._id != idToRemove);
 
