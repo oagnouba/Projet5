@@ -1,6 +1,6 @@
 const urlParam = new URLSearchParams(window.location.search);
 let productId = urlParam.get("id");
-let product = {};
+let product = null;
 
 fetch("http://localhost:3000/api/teddies/" + productId)
     .then((response) => {
@@ -40,6 +40,9 @@ fetch("http://localhost:3000/api/teddies/" + productId)
 
 //Ajout panier
 function ajouterAuPanier() {
+  if (product == null) {
+    return;
+  }
   let basket = GetBasket();
 
   let indexInBasket = basket.findIndex((item) => item._id === productId);
