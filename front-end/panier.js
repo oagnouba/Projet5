@@ -154,12 +154,10 @@ function validationClick(e) {
     }
 
     //Création de la liste
-    var productList = [];
-
-    for (var i = 0; i < localStorage.length; i++) {
-        let item = localStorage.getItem(localStorage.key(i));
-        let product = JSON.parse(item);
-        productList.push(product._id);
+    let productList = [];
+    let basket = GetBasket();
+    for (const item of basket) {
+        productList.push(item._id);
     }
 
     //alerte si le client valide un panier vide
