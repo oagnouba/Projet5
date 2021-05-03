@@ -1,5 +1,5 @@
 function GetBasket() {
-    let basketFromStorage = localstorage.getitem("basket");
+    let basketFromStorage = localStorage.getItem("basket");
     if (basketFromStorage === null) {
         return [];
     } else {
@@ -9,5 +9,5 @@ function GetBasket() {
 
 function SaveBasket(basketToSave) {
     let basketAsString = JSON.stringify(basketToSave);
-    localstorage.setItem("basket", basketAsString);
+    localStorage.setItem("basket", basketAsString);
 }
